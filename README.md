@@ -1,3 +1,7 @@
+# Nested Vue Component does not render when bundled separately with webpack
+
+To replicate behavior where nested vue component does not render, do the following:
+
 # Bundle Everything
 
 When I bundle and compile Vue components and server-side Vue code in the same bundle.
