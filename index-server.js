@@ -4,7 +4,7 @@ import Test from './src/components/TestComponent.vue'; // Import the custom comp
 import TestComposition from './src/components/TestComponentComposition.vue';
 
 const otherApp = createSSRApp({
-  template: '<Test/> <!-- vs. --> <TestComposition/>',
+  template: '<Test></Test> <!-- vs. --> <TestComposition></TestComposition>',
 });
 
 otherApp.component('Test', Test);

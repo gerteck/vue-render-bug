@@ -7,7 +7,7 @@ import pkg from './dist/vue-components.bundle.js';
 const { Test, TestComposition } = pkg;
 
 const otherApp = createSSRApp({
-    template: '<Test/> <!-- vs. --> <TestComposition/>',
+    template: '<Test></Test> <!-- vs. --> <TestComposition></TestComposition>',
 });
 otherApp.component('Test', Test);
 otherApp.component('TestComposition', TestComposition);
