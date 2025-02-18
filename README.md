@@ -8,7 +8,11 @@ node dist/bundleWithServer.js
 ```
 Output:
 ```
+<!--[-->
 <div> Hello from Test1! <p class="greeting">Hello from Test2!</p></div>
+<!-- vs. -->
+<div> Hello from Test1! <p class="greeting">Hello from Test2!</p></div>
+<!--]-->
 ```
 
 # Bundle just Vue Components
@@ -23,6 +27,13 @@ node index.mjs
 
 Output:
 ```
+<!--[-->
 <div> Hello from Test1! <!----></div>
+<!-- vs. -->
+<div> Hello from Test1! <p class="greeting">Hello from Test2!</p></div>
+<!--]-->
 ```
 
+## Tested on
+* Vue@3.3.11
+* Vue@3.5.13
