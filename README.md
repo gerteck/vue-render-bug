@@ -41,3 +41,5 @@ Output:
 ## Tested on
 * Vue@3.3.11
 * Vue@3.5.13
+
+Opened issue: https://github.com/vuejs/core/issues/12905
