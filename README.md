@@ -2,7 +2,7 @@
 
 To replicate behavior where nested vue component does not render, do the following:
 
-# Bundle Everything
+# Bundle Everything (Nested Component Renders Fine)
 
 When I bundle and compile Vue components and server-side Vue code in the same bundle.
 
@@ -19,7 +19,7 @@ Output:
 <!--]-->
 ```
 
-# Bundle just Vue Components
+# Bundle just Vue Components (Nested Component does not render for Options API)
 
 When I bundle Vue Components using webpack then use components (ultimately for SSR),
 the nested vue component does not render. 
