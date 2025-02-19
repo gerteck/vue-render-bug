@@ -1,8 +1,14 @@
-# Nested Vue Component does not render when bundled separately with webpack
+# Solved: need to externalize vue in webpack to ensure vue components render properly.
+
+Works as expected when configured properly in webpack.
+
+
+
+## Nested Vue Component does not render when bundled separately with webpack
 
 To replicate behavior where nested vue component does not render, do the following:
 
-# Bundle Everything (Nested Component Renders Fine)
+### Bundle Everything (Nested Component Renders Fine)
 
 When I bundle and compile Vue components and server-side Vue code in the same bundle.
 
@@ -19,7 +25,7 @@ Output:
 <!--]-->
 ```
 
-# Bundle just Vue Components (Nested Component does not render for Options API)
+### Bundle just Vue Components (Nested Component does not render for Options API)
 
 When I bundle Vue Components using webpack then use components (ultimately for SSR),
 the nested vue component does not render. 
@@ -32,13 +38,13 @@ node index.mjs
 Output:
 ```
 <!--[-->
-<div> Hello from Test1! <!----></div>
+<div> Hello from Test1! <p class="greeting">Hello from Test2!</p></div>
 <!-- vs. -->
 <div> Hello from Test1! <p class="greeting">Hello from Test2!</p></div>
 <!--]-->
 ```
 
-## Tested on
+### Tested on
 * Vue@3.3.11
 * Vue@3.5.13
 

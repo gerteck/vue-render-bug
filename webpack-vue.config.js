@@ -5,6 +5,9 @@ const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
   target: 'node',  // Node environment since you're using `require`
   entry: './src/components/index.js',  // Entry point for your Vue components
+  externals: {
+    vue: 'Vue',
+  },
   output: {
     filename: 'vue-components.bundle.js',  // Bundle your Vue components into this file
     path: path.resolve(__dirname, 'dist'),  // Output directory for bundled components
